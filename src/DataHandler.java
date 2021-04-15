@@ -33,10 +33,10 @@ public class DataHandler {
         return tableNames;
     }
 
-    public static void addSchool(String ID, String name, String HoS) {
+    public static void addMember(String ID, String name, String age, String status) {
         String msAccDB = "firstGUIdb.accdb";
         String dbURL ="jdbc:ucanaccess://" + msAccDB;
-        String query = "INSERT INTO School VALUES ('" + ID + "','" + name + "','" + HoS + "');";
+        String query = "INSERT INTO Members VALUES ('" + ID + "','" + name + "','" + age + "','" + status + "');";
         System.out.println(query);
         // Step 1: Loading or registering Oracle JDBC driver class
         // Step 2: Opening database connection

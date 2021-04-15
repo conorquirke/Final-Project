@@ -32,6 +32,12 @@ public class SimpleGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        tableNameCBox = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        resultTbl = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         schoolIDTxt = new javax.swing.JTextField();
@@ -41,97 +47,10 @@ public class SimpleGUI extends javax.swing.JFrame {
         schoolNameTxt = new javax.swing.JTextField();
         schoolHoSTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        tableNameCBox = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        resultTbl = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
+        memberID = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setLabelFor(schoolIDTxt);
-        jLabel1.setText("Code");
-
-        schoolIDTxt.setToolTipText("");
-
-        schoolAddBtn.setForeground(new java.awt.Color(255, 102, 102));
-        schoolAddBtn.setText("Create new member in database");
-        schoolAddBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                schoolAddBtnActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setLabelFor(schoolNameTxt);
-        jLabel2.setText("Name");
-
-        jLabel3.setLabelFor(schoolHoSTxt);
-        jLabel3.setText("Director");
-
-        schoolNameTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                schoolNameTxtActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 255, 51));
-        jLabel4.setText("Commercial Rowing Club est 1956");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(schoolHoSTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                                    .addComponent(schoolIDTxt)
-                                    .addComponent(schoolNameTxt)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(schoolAddBtn)
-                                .addGap(0, 12, Short.MAX_VALUE)))))
-                .addGap(128, 128, 128))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(schoolIDTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(schoolNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(schoolHoSTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42)
-                .addComponent(schoolAddBtn)
-                .addContainerGap(86, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Input", jPanel1);
 
         jLabel5.setText("Select table");
 
@@ -191,6 +110,100 @@ public class SimpleGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Output", jPanel2);
 
+        jLabel1.setLabelFor(schoolIDTxt);
+        jLabel1.setText("Code");
+
+        schoolIDTxt.setToolTipText("");
+
+        schoolAddBtn.setForeground(new java.awt.Color(255, 102, 102));
+        schoolAddBtn.setText("Create new member in database");
+        schoolAddBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                schoolAddBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setLabelFor(schoolNameTxt);
+        jLabel2.setText("Name");
+
+        jLabel3.setLabelFor(schoolHoSTxt);
+        jLabel3.setText("Director");
+
+        schoolNameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                schoolNameTxtActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 255, 51));
+        jLabel4.setText("Commercial Rowing Club est 1956");
+
+        jLabel6.setText("MemberID");
+
+        memberID.setToolTipText("");
+        memberID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                memberIDActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(schoolAddBtn)
+                        .addGap(0, 12, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(schoolHoSTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                                    .addComponent(schoolIDTxt)
+                                    .addComponent(schoolNameTxt)
+                                    .addComponent(memberID)))
+                            .addComponent(jLabel4))))
+                .addGap(128, 128, 128))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(memberID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(schoolIDTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(schoolNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(schoolHoSTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(schoolAddBtn)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Input", jPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -209,27 +222,30 @@ public class SimpleGUI extends javax.swing.JFrame {
 
     private void schoolAddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolAddBtnActionPerformed
         // TODO add your handling code here:
-        String ID = schoolIDTxt.getText().trim();
-        String name = schoolNameTxt.getText().trim();
-        String HoS = schoolHoSTxt.getText().trim();
         
-        DataHandler.addSchool(ID, name, HoS);
+        String ID = memberID.getText().trim();
+        String name = schoolIDTxt.getText().trim();
+        String age = schoolNameTxt.getText().trim();
+        
+        String status = schoolHoSTxt.getText().trim();
+        
+        DataHandler.addMember(ID, name, age, status);
         
     }//GEN-LAST:event_schoolAddBtnActionPerformed
 
     private void schoolNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolNameTxtActionPerformed
         // TODO add your handling code here:
-        if(schoolIDTxt.getText().trim().isEmpty() || schoolNameTxt.getText().trim().isEmpty())
-        {
-            JOptionPane.showMessageDialog(null,"please enter school ID and name");
-        }
-        else{
-        String ID = schoolIDTxt.getText().trim();
-        String name = schoolNameTxt.getText().trim();
-        String HoS = schoolHoSTxt.getText().trim();
+        ////if(schoolIDTxt.getText().trim().isEmpty() || schoolNameTxt.getText().trim().isEmpty())
+       // {
+       //     JOptionPane.showMessageDialog(null,"please enter school ID and name");
+      //  }
+       // else{
+      //  String ID = schoolIDTxt.getText().trim();
+       // String name = schoolNameTxt.getText().trim();
+       // String HoS = schoolHoSTxt.getText().trim();
         
-        DataHandler.addSchool(ID, name, HoS);
-        }  
+       // DataHandler.addSchool(ID, name, HoS);
+       // }  
         
         
         
@@ -242,6 +258,10 @@ public class SimpleGUI extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void memberIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_memberIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,10 +305,12 @@ public class SimpleGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField memberID;
     private javax.swing.JTable resultTbl;
     private javax.swing.JButton schoolAddBtn;
     private javax.swing.JTextField schoolHoSTxt;
